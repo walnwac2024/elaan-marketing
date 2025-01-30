@@ -10,7 +10,56 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
     <meta name="description" content="Manha HTML 5 Template " />
+    <style>
+        /* Modal container */
+        .modal {
+            /* display: none; Hidden by default */
+            position: fixed;
+            z-index: 100; /* Ensure it appears above other content */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
 
+        /* Modal content */
+        .modal-content {
+            position: relative;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* Close button */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            color: red;
+        }
+
+        .close-btn:hover {
+            color: darkred;
+        }
+
+        /* Image styling */
+        .modal img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        /* icon images */
+        .icon-img{
+            width: 120px;
+        }
+    </style>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,7 +122,7 @@
     <!-- Preloader End -->
 
 
-
+    
     <div class="page-wrapper boxed_wrapper">
         <header class="main-header main-header-style1" data-aos="fade-down" data-aos-easing="linear"
             data-aos-duration="1500">
@@ -82,6 +131,7 @@
                     <img src="assets/images/resources/logo-1.png" alt="Awesome Logo" title="" />
                 </a>
             </div>
+            
             <div class="main-header-style1__top">
                 <div class="container">
                     <div class="main-header-style1__top-inner">
@@ -103,8 +153,8 @@
                         </div><!-- /.header-contact-info-style1 -->
                         <div class="header-menu-style1">
                             <ul>
-                                <li><a href="#">Terms & Condition</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
+                                <!-- <li><a href="#">Terms & Condition</a></li>
+                                <li><a href="#">Privacy Policy</a></li> -->
                                 <li><a href="contact.html">Contact Us</a></li>
                             </ul>
                         </div><!-- /.header-menu-style1 -->
@@ -140,14 +190,14 @@
                                         <li class="dropdown">
                                             <a href="#">About</a>
                                             <ul>
-                                                <li>
+                                                <!-- <li>
                                                     <a href="about.html">About our Company</a>
-                                                </li>
+                                                </li> -->
                                                 <li><a href="team.html">Our Team</a></li>
                                             </ul>
                                         </li>
                                         <li class="dropdown megamenu">
-                                            <a href="projects.html">Projects </a>
+                                            <a href="projects.html">On-Going Projects</a>
                                             <ul>
                                                 <li>
                                                     <div class="megamenu-content-box">
@@ -159,7 +209,7 @@
                                                                     <div class="col-lg-3">
                                                                         <div class="home-showcase__item">
                                                                             <div class="home-showcase__image">
-                                                                                <img src="assets/images/home-showcase/home-showcase-1-1.jpg"
+                                                                                <img src="assets/images/home-showcase/Magnus Mall.jpeg"
                                                                                     alt="">
                                                                                 <div class="home-showcase__buttons">
                                                                                     <a href="/themagnusmall"
@@ -180,7 +230,7 @@
                                                                     <div class="col-lg-3">
                                                                         <div class="home-showcase__item">
                                                                             <div class="home-showcase__image">
-                                                                                <img src="assets/images/home-showcase/home-showcase-1-2.jpg"
+                                                                                <img src="assets/images/home-showcase/GRC.jpeg"
                                                                                     alt="">
                                                                                 <div class="home-showcase__buttons">
                                                                                     <a href="/grc"
@@ -198,11 +248,12 @@
                                                                         </div>
                                                                     </div>
                                                                     <!--End Home Showcase Item-->
+                                                                    
                                                                     <!--Start Home Showcase Item-->
                                                                     <div class="col-lg-3">
                                                                         <div class="home-showcase__item">
                                                                             <div class="home-showcase__image">
-                                                                                <img src="assets/images/home-showcase/home-showcase-1-3.jpg"
+                                                                                <img src="assets/images/home-showcase/Mall-of-Korang.jpg"
                                                                                     alt="">
                                                                                 <div class="home-showcase__buttons">
                                                                                     <a href="/mallofkorang"
@@ -219,27 +270,137 @@
                                                                         </div>
                                                                     </div>
                                                                     <!--End Home Showcase Item-->
-     <!--Start Home Showcase Item-->
-     <div class="col-lg-3">
-        <div class="home-showcase__item">
-            <div class="home-showcase__image">
-                <img src="assets/images/home-showcase/home-showcase-1-3.jpg"
-                    alt="">
-                <div class="home-showcase__buttons">
-                    <a href="/islamabadsquare"
-                        class="btn-one home-showcase__buttons__item top">
-                        <span class="txt">
-                            Islamabad Square
-                        </span>
-                    </a>
-                </div>
-            </div>
-            <h3 class="home-showcase__title">
-                Islamabad Square
-            </h3>
-        </div>
-    </div>
-    <!--End Home Showcase Item-->
+                                                                    <!--Start Home Showcase Item-->
+                                                                    <div class="col-lg-3">
+                                                                     <div class="home-showcase__item">
+                                                                        <div class="home-showcase__image">
+                                                                             <img src="assets/images/home-showcase/Islamabad-Square (1).jpg"
+                                                                                                alt="">
+                                                                                 <div class="home-showcase__buttons">
+                                                                                     <a href="/islamabadsquare"
+                                                                                                    class="btn-one home-showcase__buttons__item top">
+                                                                                                    <span class="txt">
+                                                                                                        Islamabad Square
+                                                                                                    </span>
+                                                                                                </a>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <h3 class="home-showcase__title">
+                                                                                            Islamabad Square
+                                                                                        </h3>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <!--End Home Showcase Item-->
+
+                                                                                <!--Start Home Showcase Item-->
+                                                                    <div class="col-lg-3">
+                                                                        <div class="home-showcase__item">
+                                                                           <div class="home-showcase__image">
+                                                                                <img src="assets/images/home-showcase/kuzagali.jpeg"
+                                                                                                   alt="">
+                                                                                    <div class="home-showcase__buttons">
+                                                                                        <a href="/islamabadsquare"
+                                                                                                       class="btn-one home-showcase__buttons__item top">
+                                                                                                       <span class="txt">
+                                                                                                        Swiss Suites Kuzagali
+                                                                                                       </span>
+                                                                                                   </a>
+                                                                                               </div>
+                                                                                           </div>
+                                                                                           <h3 class="home-showcase__title">
+                                                                                            Swiss Suites Kuzagali
+                                                                                           </h3>
+                                                                                       </div>
+                                                                                   </div>
+                                                                                   <!--End Home Showcase Item-->
+
+                                                                                   <!--Start Home Showcase Item-->
+                                                                    <div class="col-lg-3">
+                                                                        <div class="home-showcase__item">
+                                                                           <div class="home-showcase__image">
+                                                                                <img src="assets/images/home-showcase/Burbhan.jpeg"
+                                                                                                   alt="">
+                                                                                    <div class="home-showcase__buttons">
+                                                                                        <a href="/islamabadsquare"
+                                                                                                       class="btn-one home-showcase__buttons__item top">
+                                                                                                       <span class="txt">
+                                                                                                        Swiss Suites Burbhan
+                                                                                                       </span>
+                                                                                                   </a>
+                                                                                               </div>
+                                                                                           </div>
+                                                                                           <h3 class="home-showcase__title">
+                                                                                            Swiss Suites Burbhan
+                                                                                           </h3>
+                                                                                       </div>
+                                                                                   </div>
+                                                                                   <!--End Home Showcase Item-->
+
+                                                                                    <!--Start Home Showcase Item-->
+                                                                    <div class="col-lg-3">
+                                                                        <div class="home-showcase__item">
+                                                                           <div class="home-showcase__image">
+                                                                                <img src="assets/images/home-showcase/Airport.jpeg"
+                                                                                                   alt="">
+                                                                                    <div class="home-showcase__buttons">
+                                                                                        <a href="/islamabadsquare"
+                                                                                                       class="btn-one home-showcase__buttons__item top">
+                                                                                                       <span class="txt">
+                                                                                                        Swiss Suites Islamabad Airport
+                                                                                                       </span>
+                                                                                                   </a>
+                                                                                               </div>
+                                                                                           </div>
+                                                                                           <h3 class="home-showcase__title">
+                                                                                            Swiss Suites Islamabad Airport
+                                                                                           </h3>
+                                                                                       </div>
+                                                                                   </div>
+                                                                                   <!--End Home Showcase Item-->
+
+                                                                                   <!--Start Home Showcase Item-->
+                                                                    <div class="col-lg-3">
+                                                                        <div class="home-showcase__item">
+                                                                           <div class="home-showcase__image">
+                                                                                <img src="assets/images/home-showcase/Grand Burbhan .jpeg"
+                                                                                                   alt="">
+                                                                                    <div class="home-showcase__buttons">
+                                                                                        <a href="/islamabadsquare"
+                                                                                                       class="btn-one home-showcase__buttons__item top">
+                                                                                                       <span class="txt">
+                                                                                                        Swiss Suites Grand Burbhan
+                                                                                                       </span>
+                                                                                                   </a>
+                                                                                               </div>
+                                                                                           </div>
+                                                                                           <h3 class="home-showcase__title">
+                                                                                            Swiss Suites Grand Burbhan
+                                                                                           </h3>
+                                                                                       </div>
+                                                                                   </div>
+                                                                                   <!--End Home Showcase Item-->
+
+                                                                                   <!--Start Home Showcase Item-->
+                                                                    <div class="col-lg-3">
+                                                                        <div class="home-showcase__item">
+                                                                           <div class="home-showcase__image">
+                                                                                <img src="assets/images/home-showcase/Ovaisco Home .jpeg"
+                                                                                                   alt="">
+                                                                                    <div class="home-showcase__buttons">
+                                                                                        <a href="/islamabadsquare"
+                                                                                                       class="btn-one home-showcase__buttons__item top">
+                                                                                                       <span class="txt">
+                                                                                                        Ovaisco Homes
+                                                                                                       </span>
+                                                                                                   </a>
+                                                                                               </div>
+                                                                                           </div>
+                                                                                           <h3 class="home-showcase__title">
+                                                                                            Ovaisco Homes
+                                                                                           </h3>
+                                                                                       </div>
+                                                                                   </div>
+                                                                                   <!--End Home Showcase Item-->
                                                                 </div>
                                                             </div>
 
@@ -249,9 +410,9 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="dropdown">
-                                            <a href="#">Services</a>
-                                            <ul>
+                                        <li >
+                                            <a href="#">Delivered Projects</a>
+                                            <!-- <ul>
                                                 <li><a href="services.html">View All Services</a></li>
                                                 <li>
                                                     <a href="ser-01-web-consulting.html">
@@ -293,12 +454,12 @@
                                                         Wireframing
                                                     </a>
                                                 </li>
-                                            </ul>
+                                            </ul> -->
                                         </li>
 
-                                        <li class="dropdown">
-                                            <a href="#">Pages</a>
-                                            <ul>
+                                        <li>
+                                            <a href="#">Project Updates</a>
+                                            <!-- <ul>
                                                 <li>
                                                     <a href="case-1.html">Case Study (Grid View)</a>
                                                 </li>
@@ -323,12 +484,12 @@
                                                 <li>
                                                     <a href="coming-soon.html">Coming Soon Page</a>
                                                 </li>
-                                            </ul>
+                                            </ul> -->
                                         </li>
 
-                                        <li class="dropdown">
+                                        <li>
                                             <a href="#">Blog</a>
-                                            <ul>
+                                            <!-- <ul>
                                                 <li>
                                                     <a href="blog.html">Blog Grid View</a>
                                                 </li>
@@ -338,7 +499,7 @@
                                                 <li>
                                                     <a href="blog-single.html">Blog Details</a>
                                                 </li>
-                                            </ul>
+                                            </ul> -->
                                         </li>
 
                                         <li>
@@ -370,10 +531,12 @@
         </div>
         <!-- /.stricky-header -->
 
-
-
+       
+       
         <!--Main Slider Start-->
+        
         <section class="main-slider main-slider-style1">
+            
             <div class="slider_outer">
                 <div class="slider_inner">
                   <ul class='slider'>
@@ -464,7 +627,7 @@
                 </div>
         </section>
         <!--Main Slider End-->
-
+        
         <!--Start Service Style1-->
         <section class="service-style1">
             <div class="container">
@@ -646,7 +809,7 @@
                     <div class="col-xl-6">
                         <div class="about-style1__img">
                             <div class="main-img-box">
-                                <img src="assets/images/about/about-style1-1.jpg" alt="">
+                                <img src="assets/images/about/440x476.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -782,7 +945,7 @@
                         }'>
                         <div class="single-case-style1">
                             <div class="img-holder">
-                                <img src="assets/images/case/case-v1-1.jpg" alt="Awesome Image">
+                                <img src="assets/images/case/Ovaisco Heights.jpg" alt="Awesome Image">
                                 <div class="img-holder-img-bg"></div>
                                 <div class="overlay-button">
                                     <a class="lightbox-image" data-fancybox="gallery"
@@ -806,7 +969,7 @@
                         </div>
                         <div class="single-case-style1">
                             <div class="img-holder">
-                                <img src="assets/images/case/case-v1-1.jpg" alt="Awesome Image">
+                                <img src="assets/images/case/Ovaisco Residencia.jpg" alt="Awesome Image">
                                 <div class="img-holder-img-bg"></div>
                                 <div class="overlay-button">
                                     <a class="lightbox-image" data-fancybox="gallery"
@@ -830,7 +993,7 @@
                         </div>
                         <div class="single-case-style1">
                             <div class="img-holder">
-                                <img src="assets/images/case/case-v1-1.jpg" alt="Awesome Image">
+                                <img src="assets/images/case/Gulberg Icon 2.jpg" alt="Awesome Image">
                                 <div class="img-holder-img-bg"></div>
                                 <div class="overlay-button">
                                     <a class="lightbox-image" data-fancybox="gallery"
@@ -854,7 +1017,7 @@
                         </div>
                         <div class="single-case-style1">
                             <div class="img-holder">
-                                <img src="assets/images/case/case-v1-1.jpg" alt="Awesome Image">
+                                <img src="assets/images/case/The Delicacy.jpg" alt="Awesome Image">
                                 <div class="img-holder-img-bg"></div>
                                 <div class="overlay-button">
                                     <a class="lightbox-image" data-fancybox="gallery"
@@ -924,8 +1087,9 @@
                                             
                                         </div>
                                         <div class="icon-box">
-                                            <div class="round-shape"></div>
-                                            <span class="icon-advertising"></span>
+                                            <!-- <div class="round-shape"></div> -->
+                                            <!-- <span class="icon-advertising"></span> -->
+                                            <img src="assets/images/icon/mission.png" class="icon-img">
                                         </div>
                                     </div>
                                 </li>
@@ -938,8 +1102,25 @@
                                             
                                         </div>
                                         <div class="icon-box">
-                                            <div class="round-shape"></div>
-                                            <span class="icon-app"></span>
+                                            <!-- <div class="round-shape"></div>
+                                            <span class="icon-app"></span> -->
+                                            <img src="assets/images/icon/targeting.png" class="icon-img">
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="inner">
+                                        <div class="counting-box">03.</div>
+                                        <div class="text-box">
+                                            <h3>Our History</h3>
+                                            <p>Since its inception in 2018, Elaan Marketing has steadily built a reputation by successfully connecting clients with their desirable properties, setting milestones in our endeavours. </p>
+                                            
+                                        </div>
+                                        <div class="icon-box">
+                                            <!-- <div class="round-shape"></div>
+                                            <span class="icon-app"></span> -->
+                                            <img src="assets/images/icon/file.png" class="icon-img">
                                         </div>
                                     </div>
                                 </li>
@@ -958,7 +1139,7 @@
                             <div class="box three"></div>
                             <div class="box four"></div>
                             <div class="features-style1__img-inner">
-                                <img src="assets/images/resources/features-style1-img-1.jpg" alt="">
+                                <img src="assets/images/resources/502x756.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -986,21 +1167,21 @@
                         <div class="single-team-style1">
                             <div class="img-box">
                                 <div class="inner">
-                                    <img src="assets/images/team/team-v1-1.jpg" alt="">
+                                    <img src="assets/images/team/Sir Obaid_.jpg" alt="">
                                 </div>
                                 <div class="social-link-box">
                                     <ul class="clearfix">
                                         <li>
-                                            <a href="#">
-                                                <i class="icon-pinterest"></i>
+                                            <a href="https://pk.linkedin.com/in/obaidayub">
+                                                <i class="icon-linkedin"></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#" class="bg-color-2">
+                                            <a href="https://www.instagram.com/obaidayub_/" class="bg-color-2">
                                                 <i class="icon-instagram"></i>
                                             </a>
                                         </li>
-                                        <li>
+                                        <!-- <li>
                                             <a href="#">
                                                 <i class="icon-social"></i>
                                             </a>
@@ -1009,7 +1190,7 @@
                                             <a href="#" class="bg-color-2">
                                                 <i class="icon-facebook-app-symbol"></i>
                                             </a>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
                             </div>
@@ -1025,21 +1206,21 @@
                         <div class="single-team-style1">
                             <div class="img-box">
                                 <div class="inner">
-                                    <img src="assets/images/team/team-v1-2.jpg" alt="">
+                                    <img src="assets/images/team/Zaniab Tufail_.jpg" alt="">
                                 </div>
                                 <div class="social-link-box">
                                     <ul class="clearfix">
                                         <li>
-                                            <a href="#">
-                                                <i class="icon-pinterest"></i>
+                                            <a href="https://www.linkedin.com/in/zainab-tufail-b38130b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                                                <i class="icon-linkedin"></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#" class="bg-color-2">
+                                            <a href="" class="bg-color-2">
                                                 <i class="icon-instagram"></i>
                                             </a>
                                         </li>
-                                        <li>
+                                        <!-- <li>
                                             <a href="#">
                                                 <i class="icon-social"></i>
                                             </a>
@@ -1048,13 +1229,13 @@
                                             <a href="#" class="bg-color-2">
                                                 <i class="icon-facebook-app-symbol"></i>
                                             </a>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
                             </div>
                             <div class="title-box">
-                                <h3><a href="#">Tanzeel Ur Rehman</a></h3>
-                                <span>Zonal Manager</span>
+                                <h3><a href="#">Zainab Tufail</a></h3>
+                                <span>Senior Account Manager</span>
                             </div>
                         </div>
                     </div>
@@ -1064,21 +1245,21 @@
                         <div class="single-team-style1">
                             <div class="img-box">
                                 <div class="inner">
-                                    <img src="assets/images/team/team-v1-3.jpg" alt="">
+                                    <img src="assets/images/team/Tanzeel_.jpg" alt="">
                                 </div>
                                 <div class="social-link-box">
                                     <ul class="clearfix">
                                         <li>
-                                            <a href="#">
-                                                <i class="icon-pinterest"></i>
+                                            <a href="https://www.linkedin.com/in/tanzeel-ur-rehman-b5463a159">
+                                                <i class="icon-linkedin"></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#" class="bg-color-2">
+                                            <a href="https://www.instagram.com/islamabadian_vibes" class="bg-color-2">
                                                 <i class="icon-instagram"></i>
                                             </a>
                                         </li>
-                                        <li>
+                                        <!-- <li>
                                             <a href="#">
                                                 <i class="icon-social"></i>
                                             </a>
@@ -1087,13 +1268,13 @@
                                             <a href="#" class="bg-color-2">
                                                 <i class="icon-facebook-app-symbol"></i>
                                             </a>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
                             </div>
                             <div class="title-box">
-                                <h3><a href="#">Ammar Shah</a></h3>
-                                <span>Zonal Manager</span>
+                                <h3><a href="#">Tanzeel Ur Rehman</a></h3>
+                                <span>Assistant Director Sales</span>
                             </div>
                         </div>
                     </div>
@@ -1396,7 +1577,7 @@
                                 </div>
                                 <div class="our-company-info">
                                     <div class="text">
-                                        <p>There are many variations of passages of Lorem.</p>
+                                        <p>Elaan Marketing drives business growth with smart strategies and strong branding.</p>
                                     </div>
                                     <div class="footer-logo-style1">
                                         <a href="index.html">
@@ -1421,22 +1602,22 @@
                                         <li>
                                             <a href="index.html">
                                                 <span class="icon-right-arrow"></span>
-                                                Corporate Business
+                                                Contact
                                             </a>
                                         </li>
                                         <li>
                                             <a href="about.html">
                                                 <span class="icon-right-arrow"></span>
-                                                SEO Agency
+                                                Blogs
                                             </a>
                                         </li>
                                         <li>
                                             <a href="testimonials.html">
                                                 <span class="icon-right-arrow"></span>
-                                                Testimonial
+                                                Our Team
                                             </a>
                                         </li>
-                                        <li>
+                                        <!-- <li>
                                             <a href="about.html">
                                                 <span class="icon-right-arrow"></span>
                                                 Company Report
@@ -1447,7 +1628,7 @@
                                                 <span class="icon-right-arrow"></span>
                                                 Marketing
                                             </a>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
                             </div>
@@ -1459,29 +1640,29 @@
                             data-wow-duration="1500ms">
                             <div class="single-footer-widget single-footer-widget--link-box margin-left-minus">
                                 <div class="title">
-                                    <h3>Our Services</h3>
+                                    <h3>Mega Projects</h3>
                                 </div>
                                 <div class="footer-widget-links">
                                     <ul>
                                         <li>
                                             <a href="ser-01-web-consulting.html">
                                                 <span class="icon-right-arrow"></span>
-                                                Web Dev. & Consulting
+                                                The Magnus Mall
                                             </a>
                                         </li>
                                         <li>
                                             <a href="ser-02-work-consulting.html">
                                                 <span class="icon-right-arrow"></span>
-                                                Work way & Consulting
+                                                GRC
                                             </a>
                                         </li>
                                         <li>
                                             <a href="ser-03-courses-uxui.html">
                                                 <span class="icon-right-arrow"></span>
-                                                Courses Ux/UI Design
+                                                Mall of Korang
                                             </a>
                                         </li>
-                                        <li>
+                                        <!-- <li>
                                             <a href="ser-04-marketing-branding.html">
                                                 <span class="icon-right-arrow"></span>
                                                 Marketing & Branding
@@ -1492,7 +1673,7 @@
                                                 <span class="icon-right-arrow"></span>
                                                 Information architecture
                                             </a>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
                             </div>
@@ -1508,14 +1689,14 @@
                                 </div>
                                 <div class="footer-widget-contact-info">
                                     <ul>
-                                        <li><a href="mailto:info.moscot@gmail.com ">info.Moscot@gmail.com </a></li>
-                                        <li><a href="tel:2512353256">Call Me (+55) -66 99 88</a></li>
+                                        <li><a href="mailto:info@elaanmarketing.com ">info@elaanmarketing.com </a></li>
+                                        <li><a href="tel:923111222679">Call Us (+92) -3111 222 679</a></li>
                                     </ul>
                                     <div class="text">
-                                        <p>Sydney Harbor Bridge Circular City<br> of Sydney, Australia.</p>
+                                        <p>Office 01, 1st Floor, Gulberg Trade<br>Center, Gulberg Greens, Islamabad.</p>
                                     </div>
                                 </div>
-                                <div class="play-store-box">
+                                <!-- <div class="play-store-box">
                                     <ul>
                                         <li>
                                             <a href="#">
@@ -1528,7 +1709,7 @@
                                             </a>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <!--End single footer widget-->
@@ -1538,12 +1719,12 @@
                             data-wow-duration="1500ms">
                             <div class="single-footer-widget single-footer-widget-middle">
                                 <div class="title">
-                                    <h3>Free Consultation</h3>
+                                    <h3>Subscribe</h3>
                                 </div>
                                 <div class="single-footer-widget__box-inner">
 
                                     <div class="footer-widget-newsletter-box">
-                                        <p>Book Your Free It Consultation.</p>
+                                        <!-- <p>Book Your Free It Consultation.</p> -->
                                         <form action="index.html" method="post">
                                             <div class="form-group">
                                                 <input type="email" name="email" placeholder="Enter your email address"
@@ -1572,23 +1753,28 @@
                                     <div class="footer-social-link">
                                         <ul class="clearfix">
                                             <li>
-                                                <a href="#">
+                                                <a href="https://www.facebook.com/elaanmarketing/">
                                                     <i class="icon-facebook"></i>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#">
+                                                <a href="https://twitter.com/elaanmarketing">
                                                     <i class="icon-twitter"></i>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#">
+                                                <a href="https://pk.linkedin.com/company/elaanmarketing">
                                                     <i class="icon-linkedin"></i>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#">
+                                                <a href="https://www.instagram.com/elaanmarketing">
                                                     <i class="icon-instagram-1"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.youtube.com/elaanmarketing">
+                                                    <i ></i>
                                                 </a>
                                             </li>
                                         </ul>
@@ -1693,6 +1879,18 @@
         </div>
     </div>
     <!-- Scroll to top End -->
+ 
+    <script>
+        // Show the modal when the page loads
+        window.onload = function () {
+            document.getElementById("imageModal").style.display = "flex";
+        };
+
+        // Close the modal
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+    </script>
 
 
     <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
