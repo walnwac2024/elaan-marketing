@@ -475,11 +475,11 @@
 .stricky-header .main-menu__list>li>a {
     position: relative;
     display: inline-block;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 20px;
     font-weight: 400;
     text-transform: capitalize;
-    font-family: var(--thm-font-2);
+    /* font-family: var(--thm-font-2); */
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
 }
@@ -1132,7 +1132,7 @@
     top: 0;
     left: 0;
     width: 256px;
-    height: 150px;
+    height: 115px;
     background-color: var(--thm-base);
     display: flex;
     align-items: center;

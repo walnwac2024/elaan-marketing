@@ -37,6 +37,7 @@
     display: grid;
     place-items: center;
     overflow: hidden;
+    margin-bottom: 1.5px;
   }
   
   .slider_inner {
@@ -48,10 +49,10 @@
   
   .slider_inner .item {
     width: 200px;
-    height: 300px;
+    height: 230px;
     list-style-type: none;
     position: absolute;
-    top: 75%;
+    top: 85%;
     transform: translateY(-50%);
     z-index: 1;
     background-position: center;

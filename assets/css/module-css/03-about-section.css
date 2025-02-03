@@ -11,6 +11,14 @@
     z-index: 10;
 }
 
+.about-style1-1 {
+    position: relative;
+    display: block;
+    background-color: #FFFFFF;
+    padding: 120px 0px 120px;
+    z-index: 10;
+}
+
 .about-style1__shape1 {
     position: absolute;
     left: 5%;
@@ -133,16 +141,17 @@
 .about-style1__content .top-title {
     position: relative;
     display: block;
-    padding-left: 20px;
+    /* padding-left: 20px; */
     margin-top: -6px;
     margin-bottom: 12px;
 }
 
 .about-style1__content .top-title::before {
-    content: "";
+    /* content: ""; */
     position: absolute;
     top: 7px;
     left: 0;
+   
     bottom: 12px;
     width: 5px;
     background-color: var(--thm-black);
