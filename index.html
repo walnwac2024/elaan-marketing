@@ -59,7 +59,84 @@
         .icon-img{
             width: 120px;
         }
+
+        /* video button for sliders */
+        .item {
+            position: relative;
+        }
+
+        .video-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(211, 211, 211, 0.9);
+            border: none;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .video-btn:hover {
+            background: rgba(211, 211, 211, 1);
+            transform: translate(-50%, -50%) scale(1.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .play-icon {
+            color: #DB3832;
+            font-size: 28px;
+            margin-left: 5px;
+        }
+
+        /* Modal Styles */
+        .video-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+        }
+
+        .modal-content {
+            position: relative;
+            width: 90%;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .video-iframe {
+            width: 100%;
+            height: 450px;
+            background: #000;
+        }
+
+        .close-modal {
+            position: absolute;
+            right: 0;
+            top: -30px;
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close-modal:hover {
+            color: #ddd;
+        }
     </style>
+
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -544,6 +621,9 @@
                 <div class="slider_inner">
                   <ul class='slider'>
                     <li class='item' style="background-image: url('assets/images/slider/the-magnus-mall.jpg')">
+                        <div class="video-btn" onclick=openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSuaGFm4ScGZS9ai');>
+                            <span class="play-icon">▶</span>
+                        </div>
                       <div class='content'>
                         <h2 class='title'>The Magnus Mall</h2>
                         <p class='description'> Lorem ipsum, dolor sit amet consectetur
@@ -558,6 +638,9 @@
                       </div>
                     </li>
                     <li class='item' style="background-image: url('assets/images/slider/gulberg-rabi-center.jpg')">
+                        <div class="video-btn" onclick=openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSuaGFm4ScGZS9ai');>
+                            <span class="play-icon">▶</span>
+                        </div>
                       <div class='content'>
                         <h2 class='title'>GRC Islamabad</h2>
                         <p class='description'> Lorem ipsum, dolor sit amet consectetur
@@ -572,6 +655,9 @@
                       </div>
                     </li>
                     <li class='item' style="background-image: url('assets/images/slider/islamabad-square.jpg')">
+                        <div class="video-btn" onclick=openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSuaGFm4ScGZS9ai');>
+                            <span class="play-icon">▶</span>
+                        </div>
                       <div class='content'>
                         <h2 class='title'>Islamabad Square</h2>
                         <p class='description'> Lorem ipsum, dolor sit amet consectetur
@@ -586,6 +672,9 @@
                       </div>
                     </li>
                     <li class='item' style="background-image: url('assets/images/slider/ovaisco-homes.jpg')">
+                        <div class="video-btn" onclick=openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSuaGFm4ScGZS9ai');>
+                            <span class="play-icon">▶</span>
+                        </div>
                       <div class='content'>
                         <h2 class='title'>Ovaisco Homes</h2>
                         <p class='description'>
@@ -600,6 +689,9 @@
                       </div>
                     </li>
                     <li class='item' style="background-image: url('assets/images/slider/swiss-suites-kuzagali.jpg')">
+                        <div class="video-btn" onclick=openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSuaGFm4ScGZS9ai');>
+                            <span class="play-icon">▶</span>
+                        </div>
                       <div class='content'>
                         <h2 class='title'>Swiss Suites KuzaGali</h2>
                         <p class='description'>
@@ -614,6 +706,9 @@
                       </div>
                     </li>
                     <li class='item' style="background-image: url('assets/images/slider/swiss-suites-islamabad-airport.jpg')">
+                        <div class="video-btn" onclick=openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSuaGFm4ScGZS9ai');>
+                            <span class="play-icon">▶</span>
+                        </div>
                       <div class='content'>
                         <h2 class='title'>Swiss Suites Airport</h2>
                         <p class='description'> Lorem ipsum, dolor sit amet consectetur
@@ -1000,7 +1095,7 @@
                     <div class="col-xl-6" >
                         <div  style="margin-left: 120px; width: 100%; height: auto;">
                             <div >
-                                <img src="assets/images/about/ceo-2.jpg" alt="">
+                                <img src="assets/images/about/1030x780-White.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -2019,6 +2114,40 @@
     <script src="assets/js/slider.js"></script>
     <!-- Template js -->
     <script src="assets/js/custom.js"></script>
+
+    <!-- video pop up for slider -->
+    <script>
+        // Function to open modal
+        function openVideoModal(videoUrl) {
+            var modal = document.getElementById('videoModal');
+            var iframe = document.getElementById('videoIframe');
+            iframe.src = videoUrl;
+            modal.style.display = 'block';
+        }
+    
+        // Function to close modal
+        function closeVideoModal() {
+            var modal = document.getElementById('videoModal');
+            var iframe = document.getElementById('videoIframe');
+            modal.style.display = 'none';
+            iframe.src = ''; // Clear the video source
+        }
+    
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            var modal = document.getElementById('videoModal');
+            if (event.target == modal) {
+                closeVideoModal();
+            }
+        }
+    
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeVideoModal();
+            }
+        });
+    </script>
 
 
 </body>
