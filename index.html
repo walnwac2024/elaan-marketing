@@ -61,6 +61,81 @@
         }
 
         /* video button for sliders */
+         /* Basic styles for modal */
+         /* ✅ Fullscreen Modal with Blurred Background */
+                    #videoModal {
+                        display: none;
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0, 0, 0, 0.8); /* Semi-transparent dark overlay */
+                        backdrop-filter: blur(10px); /* Blurred effect */
+                        z-index: 1000;
+                        align-items: center;
+                        justify-content: center;
+                        transition: all 0.3s ease-in-out;
+                    }
+
+                    /* ✅ Modern Modal Box */
+                    .modal-content {
+                        position: relative;
+                        width: 80%;
+                        max-width: 800px;
+                        height: 450px;
+                        background: #000;
+                        border-radius: 12px;
+                        box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+                        overflow: hidden;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: transform 0.3s ease-in-out;
+                    }
+
+                    /* ✅ Video Frame */
+                    #videoFrame {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 12px;
+                    }
+
+                    /* ✅ Stylish Close Button */
+                    #closeModal {
+                        position: absolute;
+                        top: 10px;
+                        right: 15px;
+                        background: transparent;
+                        color: #DB3832;
+                        border: none;
+                        font-size: 24px;
+                        font-weight: bold;
+                        cursor: pointer;
+                        transition: transform 0.2s ease-in-out;
+                    }
+
+                    #closeModal:hover {
+                        transform: scale(1.2);
+                    }
+
+                    /* ✅ Smooth Modal Animation */
+                    #videoModal.show {
+                        display: flex;
+                        animation: fadeIn 0.3s ease-in-out;
+                    }
+
+                    @keyframes fadeIn {
+                        from {
+                            opacity: 0;
+                        }
+                        to {
+                            opacity: 1;
+                        }
+                    }
+
+
+
         .item {
             position: relative;
         }
@@ -95,45 +170,6 @@
             margin-left: 5px;
         }
 
-        /* Modal Styles */
-        .video-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            z-index: 1000;
-        }
-
-        .modal-content {
-            position: relative;
-            width: 90%;
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-        }
-
-        .video-iframe {
-            width: 100%;
-            height: 450px;
-            background: #000;
-        }
-
-        .close-modal {
-            position: absolute;
-            right: 0;
-            top: -30px;
-            color: #fff;
-            font-size: 30px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .close-modal:hover {
-            color: #ddd;
-        }
     </style>
 
     
@@ -621,9 +657,11 @@
                 <div class="slider_inner">
                   <ul class='slider'>
                     <li class='item' style="background-image: url('assets/images/slider/the-magnus-mall.jpg')">
-                        <div class="video-btn" onclick=openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSuaGFm4ScGZS9ai');>
+                        <div class="video-btn" onclick="openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSuaGFm4ScGZS9ai')">
                             <span class="play-icon">▶</span>
                         </div>
+                    
+                      
                       <div class='content'>
                         <h2 class='title'>The Magnus Mall</h2>
                         <p class='description'> Lorem ipsum, dolor sit amet consectetur
@@ -638,9 +676,11 @@
                       </div>
                     </li>
                     <li class='item' style="background-image: url('assets/images/slider/gulberg-rabi-center.jpg')">
-                        <div class="video-btn" onclick=openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSuaGFm4ScGZS9ai');>
+                        <div class="video-btn" onclick="openVideoModal('https://www.youtube.com/embed/pyB_ZjqyihM?si=XRdDsJILZYE2hnUt')">
                             <span class="play-icon">▶</span>
                         </div>
+                    
+                      
                       <div class='content'>
                         <h2 class='title'>GRC Islamabad</h2>
                         <p class='description'> Lorem ipsum, dolor sit amet consectetur
@@ -655,9 +695,11 @@
                       </div>
                     </li>
                     <li class='item' style="background-image: url('assets/images/slider/islamabad-square.jpg')">
-                        <div class="video-btn" onclick=openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSuaGFm4ScGZS9ai');>
+                        <div class="video-btn" onclick="openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSuaGFm4ScGZS9a')">
                             <span class="play-icon">▶</span>
                         </div>
+                    
+                       
                       <div class='content'>
                         <h2 class='title'>Islamabad Square</h2>
                         <p class='description'> Lorem ipsum, dolor sit amet consectetur
@@ -672,9 +714,11 @@
                       </div>
                     </li>
                     <li class='item' style="background-image: url('assets/images/slider/ovaisco-homes.jpg')">
-                        <div class="video-btn" onclick=openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSuaGFm4ScGZS9ai');>
+                        <div class="video-btn" onclick="openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSuaGFm4SGZS9ai')">
                             <span class="play-icon">▶</span>
                         </div>
+                    
+                       
                       <div class='content'>
                         <h2 class='title'>Ovaisco Homes</h2>
                         <p class='description'>
@@ -689,9 +733,11 @@
                       </div>
                     </li>
                     <li class='item' style="background-image: url('assets/images/slider/swiss-suites-kuzagali.jpg')">
-                        <div class="video-btn" onclick=openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSuaGFm4ScGZS9ai');>
+                        <div class="video-btn" onclick="openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wuaGFm4ScGZS9ai')">
                             <span class="play-icon">▶</span>
                         </div>
+                    
+                        
                       <div class='content'>
                         <h2 class='title'>Swiss Suites KuzaGali</h2>
                         <p class='description'>
@@ -706,9 +752,11 @@
                       </div>
                     </li>
                     <li class='item' style="background-image: url('assets/images/slider/swiss-suites-islamabad-airport.jpg')">
-                        <div class="video-btn" onclick=openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSuaGFm4ScGZS9ai');>
+                        <div class="video-btn" onclick="openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSaGFm4ScGZS9ai')">
                             <span class="play-icon">▶</span>
                         </div>
+                    
+                        
                       <div class='content'>
                         <h2 class='title'>Swiss Suites Airport</h2>
                         <p class='description'> Lorem ipsum, dolor sit amet consectetur
@@ -730,6 +778,15 @@
                 </div>
                 </div>
         </section>
+
+        <!-- ✅ Stylish Video Modal -->
+            <div id="videoModal">
+                <div class="modal-content">
+                    <button id="closeModal" onclick="closeVideoModal()">✖</button>
+                    <iframe id="videoFrame" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
         <!--Main Slider End-->
         
         <!--Start Service Style1-->
@@ -2117,37 +2174,38 @@
 
     <!-- video pop up for slider -->
     <script>
-        // Function to open modal
         function openVideoModal(videoUrl) {
-            var modal = document.getElementById('videoModal');
-            var iframe = document.getElementById('videoIframe');
+            let modal = document.getElementById("videoModal");
+            let iframe = document.getElementById("videoFrame");
+    
+            if (!modal || !iframe) {
+                console.error("Modal or iframe element not found!");
+                return;
+            }
+    
+            // ✅ Set video source
             iframe.src = videoUrl;
-            modal.style.display = 'block';
+    
+            // ✅ Show modal with animation
+            modal.classList.add("show");
         }
     
-        // Function to close modal
         function closeVideoModal() {
-            var modal = document.getElementById('videoModal');
-            var iframe = document.getElementById('videoIframe');
-            modal.style.display = 'none';
-            iframe.src = ''; // Clear the video source
-        }
+            let modal = document.getElementById("videoModal");
+            let iframe = document.getElementById("videoFrame");
     
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            var modal = document.getElementById('videoModal');
-            if (event.target == modal) {
-                closeVideoModal();
+            if (modal) {
+                modal.classList.remove("show");
+    
+                // Delay clearing the iframe to avoid abrupt stop
+                setTimeout(() => {
+                    iframe.src = "";
+                }, 300);
             }
         }
-    
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeVideoModal();
-            }
-        });
     </script>
+    
+    
 
 
 </body>
