@@ -2508,5 +2508,13 @@
     object-fit: cover;
 }
 
+.modal-content {
+    max-width: 90%;   /* Make it almost full width on mobile */
+    height: auto;     /* Allow it to grow naturally based on content */
+    padding: 20px;    /* Reduce padding for smaller screens */
+  }
+
+  
+
 }
 }
