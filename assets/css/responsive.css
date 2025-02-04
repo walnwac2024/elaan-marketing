@@ -2489,17 +2489,24 @@
         display: none;
     }
 
+/* for slider section */
 
+@media (max-width: 768px) {
+   .btn-one{
+    margin-bottom: 40px;
+    margin-top: 150px;
+   }
 
+   .hide-on-mobile {
+    display: none;
+  }
 
+  .thumbnail {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
-
-
-
-
-
-
-
-
-
+}
 }
