@@ -136,27 +136,29 @@
 
 
 
-        .item {
+        /* .item {
             position: relative;
         }
 
         .video-btn {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(211, 211, 211, 0.9);
-            border: none;
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            z-index: 10;
-        }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(211, 211, 211, 0.9);
+    border: none;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    overflow: hidden;
+}
+
 
         .video-btn:hover {
             background: rgba(211, 211, 211, 1);
@@ -165,11 +167,100 @@
         }
 
         .play-icon {
-            color: #DB3832;
-            font-size: 28px;
-            margin-left: 5px;
+    position: relative;
+    color: #DB3832;
+    font-size: 28px;
+    margin-left: 5px;
+    z-index: 2;
+} */
+
+.video-container {
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
+        .thumbnail {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 0px;
+            right: 5px;
+            background-color: red;
+            color: white;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: #111;
+            padding: 30px;
+            border-radius: 16px;
+            position: relative;
+            max-width: 40%;
+            height: 85vh;
+            text-align: center;
+            box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            cursor: pointer;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            background: red;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s ease;
+        }
+
+        .close-button:hover {
+            background: darkred;
+        }
+
+        iframe {
+            border-radius: 10px;
+            width: 100%;
+            height: 95%;
+        }
     </style>
 
     
@@ -657,10 +748,14 @@
                 <div class="slider_inner">
                   <ul class='slider'>
                     <li class='item' style="background-image: url('assets/images/slider/the-magnus-mall.jpg')">
-                        <div class="video-btn" onclick="openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSuaGFm4ScGZS9ai')">
+                        <!-- <div class="video-btn" onclick="openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSuaGFm4ScGZS9ai')">
                             <span class="play-icon">▶</span>
+                        </div> -->
+                        
+                        <div class="video-container">
+                            <img src="assets/images/slider/the-magnus-mall.jpg" alt="Video Thumbnail" class="thumbnail">
+                            <div class="play-button" onclick="openModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=atPUJE_qavepHEJT')">▶</div>
                         </div>
-                    
                       
                       <div class='content'>
                         <h2 class='title'>The Magnus Mall</h2>
@@ -676,8 +771,13 @@
                       </div>
                     </li>
                     <li class='item' style="background-image: url('assets/images/slider/gulberg-rabi-center.jpg')">
-                        <div class="video-btn" onclick="openVideoModal('https://www.youtube.com/embed/pyB_ZjqyihM?si=XRdDsJILZYE2hnUt')">
+                        <!-- <div class="video-btn" onclick="openVideoModal('https://www.youtube.com/embed/pyB_ZjqyihM?si=XRdDsJILZYE2hnUt')">
                             <span class="play-icon">▶</span>
+                        </div> -->
+
+                        <div class="video-container">
+                            <img src="assets/images/slider/the-magnus-mall.jpg" alt="Video Thumbnail" class="thumbnail">
+                            <div class="play-button" onclick="openModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=atPUJE_qavepHEJT')">▶</div>
                         </div>
                     
                       
@@ -695,10 +795,13 @@
                       </div>
                     </li>
                     <li class='item' style="background-image: url('assets/images/slider/islamabad-square.jpg')">
-                        <div class="video-btn" onclick="openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSuaGFm4ScGZS9a')">
+                        <!-- <div class="video-btn" onclick="openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSuaGFm4ScGZS9a')">
                             <span class="play-icon">▶</span>
+                        </div> -->
+                        <div class="video-container">
+                            <img src="assets/images/slider/the-magnus-mall.jpg" alt="Video Thumbnail" class="thumbnail">
+                            <div class="play-button" onclick="openModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=atPUJE_qavepHEJT')">▶</div>
                         </div>
-                    
                        
                       <div class='content'>
                         <h2 class='title'>Islamabad Square</h2>
@@ -714,10 +817,13 @@
                       </div>
                     </li>
                     <li class='item' style="background-image: url('assets/images/slider/ovaisco-homes.jpg')">
-                        <div class="video-btn" onclick="openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSuaGFm4SGZS9ai')">
+                        <!-- <div class="video-btn" onclick="openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSuaGFm4SGZS9ai')">
                             <span class="play-icon">▶</span>
+                        </div> -->
+                        <div class="video-container">
+                            <img src="assets/images/slider/the-magnus-mall.jpg" alt="Video Thumbnail" class="thumbnail">
+                            <div class="play-button" onclick="openModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=atPUJE_qavepHEJT')">▶</div>
                         </div>
-                    
                        
                       <div class='content'>
                         <h2 class='title'>Ovaisco Homes</h2>
@@ -733,8 +839,12 @@
                       </div>
                     </li>
                     <li class='item' style="background-image: url('assets/images/slider/swiss-suites-kuzagali.jpg')">
-                        <div class="video-btn" onclick="openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wuaGFm4ScGZS9ai')">
+                        <!-- <div class="video-btn" onclick="openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wuaGFm4ScGZS9ai')">
                             <span class="play-icon">▶</span>
+                        </div> -->
+                        <div class="video-container">
+                            <img src="assets/images/slider/the-magnus-mall.jpg" alt="Video Thumbnail" class="thumbnail">
+                            <div class="play-button" onclick="openModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=atPUJE_qavepHEJT')">▶</div>
                         </div>
                     
                         
@@ -752,10 +862,13 @@
                       </div>
                     </li>
                     <li class='item' style="background-image: url('assets/images/slider/swiss-suites-islamabad-airport.jpg')">
-                        <div class="video-btn" onclick="openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSaGFm4ScGZS9ai')">
+                        <!-- <div class="video-btn" onclick="openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSaGFm4ScGZS9ai')">
                             <span class="play-icon">▶</span>
+                        </div> -->
+                        <div class="video-container">
+                            <img src="assets/images/slider/the-magnus-mall.jpg" alt="Video Thumbnail" class="thumbnail">
+                            <div class="play-button" onclick="openModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=atPUJE_qavepHEJT')">▶</div>
                         </div>
-                    
                         
                       <div class='content'>
                         <h2 class='title'>Swiss Suites Airport</h2>
@@ -780,12 +893,12 @@
         </section>
 
         <!-- ✅ Stylish Video Modal -->
-            <div id="videoModal">
-                <div class="modal-content">
-                    <button id="closeModal" onclick="closeVideoModal()">✖</button>
-                    <iframe id="videoFrame" frameborder="0" allowfullscreen></iframe>
-                </div>
+        <div id="video-modal" class="modal" onclick="closeModal(event)">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeModal(event)">&times;</span>
+                <iframe id="video-frame" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
             </div>
+        </div>
 
         <!--Main Slider End-->
         
@@ -2174,33 +2287,15 @@
 
     <!-- video pop up for slider -->
     <script>
-        function openVideoModal(videoUrl) {
-            let modal = document.getElementById("videoModal");
-            let iframe = document.getElementById("videoFrame");
-    
-            if (!modal || !iframe) {
-                console.error("Modal or iframe element not found!");
-                return;
-            }
-    
-            // ✅ Set video source
-            iframe.src = videoUrl;
-    
-            // ✅ Show modal with animation
-            modal.classList.add("show");
+        function openModal(videoSrc) {
+            document.getElementById('video-frame').src = videoSrc;
+            document.getElementById('video-modal').style.display = 'flex';
         }
-    
-        function closeVideoModal() {
-            let modal = document.getElementById("videoModal");
-            let iframe = document.getElementById("videoFrame");
-    
-            if (modal) {
-                modal.classList.remove("show");
-    
-                // Delay clearing the iframe to avoid abrupt stop
-                setTimeout(() => {
-                    iframe.src = "";
-                }, 300);
+
+        function closeModal(event) {
+            if (event.target.id === 'video-modal' || event.target.classList.contains('close-button')) {
+                document.getElementById('video-frame').src = "";
+                document.getElementById('video-modal').style.display = 'none';
             }
         }
     </script>

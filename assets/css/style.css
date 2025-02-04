@@ -5905,3 +5905,31 @@ select:focus {
     width: 100%;
     height: 100%;
 }
+
+
+
+
+.ul-banner-slide-img {
+    position: relative;
+    width: max-content;
+    max-width: 100%;
+    margin-left: clamp(0px, 2.63vw, 50px);
+  }
+
+  .wow {
+    animation-duration: 1s !important;
+  }
+
+  .ul-banner-slide-img a {
+    position: absolute;
+    width: clamp(52px, 4.83vw, 92px);
+    aspect-ratio: 1/1;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ul-primary);
+  }
