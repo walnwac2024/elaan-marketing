@@ -2519,7 +2519,61 @@
     padding: 20px;    /* Reduce padding for smaller screens */
   }
 
-  
+  /* ceo img */
+  .img-ceo {
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    height: 100%;              /* Ensure the container takes full height */
+  }
+
+  .image-container {
+    width: 100%;              /* Ensure container takes full width */
+    height: auto;
+    display: flex;
+    justify-content: center;  /* Center image horizontally */
+    align-items: center;      /* Center image vertically */
+  }
+
+  .img-ceo img {
+    max-width: 90%;           /* Adjust the image width for mobile */
+    height: auto;             /* Keep aspect ratio intact */
+    border-radius: 10px;      /* Optional: rounded corners for aesthetics */
+  }
+
+  .ceo-container {
+    display: flex;
+    flex-direction: column; /* Vertical alignment */
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.ceo-image {
+    order: -1; /* Move image to the top */
+    margin-bottom: 10px; /* Add space below the image */
+}
+
+.ceo-image img {
+    width: 250px; /* Larger image size for phones */
+    height: auto;
+}
+
+.ceo-title {
+    font-size: 20px;
+}
+
+.ceo-text {
+    font-size: 14px;
+}
+
+.ceo-signature {
+    font-size: 16px;
+}
+
+.ceo-role {
+    font-size: 14px;
+}
 
 }
 }

@@ -5933,3 +5933,70 @@ select:focus {
     justify-content: center;
     color: var(--ul-primary);
   }
+
+
+  /* ##################################################
+
+               CEO MESSAGE
+
+###################################################*/
+.ceo-message-section {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    /* padding-top: 150PX; */
+    background-color: white;
+  }
+  
+  .ceo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 20px;
+  }
+  
+  .ceo-content {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .ceo-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black;
+  }
+  
+  .ceo-text {
+    line-height: 1.8;
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: black;
+  }
+  
+  .ceo-signature {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: black;
+  }
+  
+  .ceo-role {
+    font-size: 16px;
+    border-bottom: 2px solid #c01e2e;
+    display: inline-block;
+    padding-bottom: 5px;
+    color: black;
+  }
+  
+  .ceo-image {
+    flex: 1;
+  }
+  
+  .ceo-image img {
+    /* width: 100%; */
+    height: auto;
+    border-radius: 5px;
+  }
+  
