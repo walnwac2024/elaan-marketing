@@ -6000,3 +6000,8 @@ select:focus {
     border-radius: 5px;
   }
   
+  /* mobile img 50+ projects */
+
+  .mobile-img {
+    margin-left: 20px;
+  }

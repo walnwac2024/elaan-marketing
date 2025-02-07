@@ -37,7 +37,7 @@
     display: grid;
     place-items: center;
     overflow: hidden;
-    margin-bottom: 1.5px;
+    margin-bottom: 2px;
   }
   
   .slider_inner {
