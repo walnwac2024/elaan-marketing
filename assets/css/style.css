@@ -6005,3 +6005,48 @@ select:focus {
   .mobile-img {
     margin-left: 20px;
   }
+
+  /* auto slider */
+
+  /* .main-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.slider_outer {
+    width: 100%;
+    position: relative;
+}
+.slider_inner {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+.slider {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: calc(100% * 5);
+}
+.item {
+    min-width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+.content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+} */
+
+
+
+
+
+
+

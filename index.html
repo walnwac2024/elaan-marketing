@@ -9,6 +9,10 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="assets/css/img-slider.css">
+    <link rel="stylesheet" href="assets/css/responsive_styles.css">
+    
     <meta name="description" content="Manha HTML 5 Template " />
     <style>
         /* Modal container */
@@ -261,6 +265,10 @@
             width: 100%;
             height: 95%;
         }
+
+
+        /* slider */
+        
     </style>
 
     
@@ -712,6 +720,9 @@
                                         <li>
                                             <a href="contact.html">Contact</a>
                                         </li>
+                                        <li>
+                                            <a href="ca.html">Careers</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -742,155 +753,90 @@
        
         <!--Main Slider Start-->
         
-        <section class="main-slider main-slider-style1">
-            
-            <div class="slider_outer">
-                <div class="slider_inner">
-                  <ul class='slider'>
-                    <li class='item' style="background-image: url('assets/images/slider/the-magnus-mall.jpg')">
-                        <!-- <div class="video-btn" onclick="openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSuaGFm4ScGZS9ai')">
-                            <span class="play-icon">▶</span>
-                        </div> -->
-                        
-                        <div class="video-container">
-                            <img src="assets/images/slider/the-magnus-mall.jpg" alt="Video Thumbnail" class="thumbnail">
-                            <div class="play-button" onclick="openModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=atPUJE_qavepHEJT')">▶</div>
-                        </div>
-                      
-                      <div class='content'>
-                        <h2 class='title hide-on-mobile'>The Magnus Mall</h2>
-                        <p class='description hide-on-mobile'> Lorem ipsum, dolor sit amet consectetur
-                        adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-                        praesentium nisi. Id laboriosam ipsam enim.  </p>
-                        <a class="btn-one" href="#">
-                            <span class="txt">
-                                Get Details</i>
-                            </span>
-                        </a>
-                        
-                      </div>
-                    </li>
-                    <li class='item' style="background-image: url('assets/images/slider/gulberg-rabi-center.jpg')">
-                        <!-- <div class="video-btn" onclick="openVideoModal('https://www.youtube.com/embed/pyB_ZjqyihM?si=XRdDsJILZYE2hnUt')">
-                            <span class="play-icon">▶</span>
-                        </div> -->
-
-                        <div class="video-container">
-                            <img src="assets/images/slider/the-magnus-mall.jpg" alt="Video Thumbnail" class="thumbnail">
-                            <div class="play-button" onclick="openModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=atPUJE_qavepHEJT')">▶</div>
-                        </div>
-                    
-                      
-                      <div class='content'>
-                        <h2 class='title hide-on-mobile'>GRC Islamabad</h2>
-                        <p class='description hide-on-mobile'> Lorem ipsum, dolor sit amet consectetur
-                        adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-                        praesentium nisi. Id laboriosam ipsam enim.  </p>
-                        <a class="btn-one" href="#">
-                            <span class="txt">
-                                Get Details</i>
-                            </span>
-                        </a>
-                       
-                      </div>
-                    </li>
-                    <li class='item' style="background-image: url('assets/images/slider/islamabad-square.jpg')">
-                        <!-- <div class="video-btn" onclick="openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSuaGFm4ScGZS9a')">
-                            <span class="play-icon">▶</span>
-                        </div> -->
-                        <div class="video-container">
-                            <img src="assets/images/slider/the-magnus-mall.jpg" alt="Video Thumbnail" class="thumbnail">
-                            <div class="play-button" onclick="openModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=atPUJE_qavepHEJT')">▶</div>
-                        </div>
-                       
-                      <div class='content'>
-                        <h2 class='title hide-on-mobile'>Islamabad Square</h2>
-                        <p class='description hide-on-mobile'> Lorem ipsum, dolor sit amet consectetur
-                        adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-                        praesentium nisi. Id laboriosam ipsam enim.  </p>
-                        <a class="btn-one" href="#">
-                            <span class="txt">
-                                Get Details</i>
-                            </span>
-                        </a>
-                       
-                      </div>
-                    </li>
-                    <li class='item' style="background-image: url('assets/images/slider/ovaisco-homes.jpg')">
-                        <!-- <div class="video-btn" onclick="openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSuaGFm4SGZS9ai')">
-                            <span class="play-icon">▶</span>
-                        </div> -->
-                        <div class="video-container">
-                            <img src="assets/images/slider/the-magnus-mall.jpg" alt="Video Thumbnail" class="thumbnail">
-                            <div class="play-button" onclick="openModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=atPUJE_qavepHEJT')">▶</div>
-                        </div>
-                       
-                      <div class='content'>
-                        <h2 class='title hide-on-mobile'>Ovaisco Homes</h2>
-                        <p class='description hide-on-mobile'>
-                          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
+        <div class="carousel">
+            <!-- item list -->
+            <div class="carousel-items">
+                <div class="slide active">
+                    <img src="assets/images/slider/gulberg-rabi-center.jpg">
+                    <div class="details">
+                        <!-- <p>theme</p> -->
+                        <h2 style="color: #fff;">GRC Islamabad</h2>
+                        <p>
+                            GRC, a commercial hub in Gulberg Greens, is strategically connected to Naval Anchorage, Senate Society, and OPF Society, with multiple routes linking it to both cities.
                         </p>
-                        <a class="btn-one" href="#">
-                            <span class="txt">
-                                Get Details</i>
-                            </span>
-                        </a>
-                       
-                      </div>
-                    </li>
-                    <li class='item' style="background-image: url('assets/images/slider/swiss-suites-kuzagali.jpg')">
-                        <!-- <div class="video-btn" onclick="openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wuaGFm4ScGZS9ai')">
-                            <span class="play-icon">▶</span>
-                        </div> -->
-                        <div class="video-container">
-                            <img src="assets/images/slider/the-magnus-mall.jpg" alt="Video Thumbnail" class="thumbnail">
-                            <div class="play-button" onclick="openModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=atPUJE_qavepHEJT')">▶</div>
-                        </div>
-                    
-                        
-                      <div class='content'>
-                        <h2 class='title hide-on-mobile'>Swiss Suites KuzaGali</h2>
-                        <p class='description hide-on-mobile'>
-                          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
+                        <a href="#" class="slide-button">Get Details</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="assets/images/slider/islamabad-square.jpg">
+                    <div class="details">
+                        <!-- <p>theme</p> -->
+                        <h2 style="color: #fff;">Islamabad Square</h2>
+                        <p>
+                            Islamabad Square Luxury Apartments redefine modern living with world-class amenities, ensuring comfort, sophistication, and an exceptional home experience.
                         </p>
-                        <a class="btn-one" href="#">
-                            <span class="txt">
-                                Get Details</i>
-                            </span>
-                        </a>
-                       
-                      </div>
-                    </li>
-                    <li class='item' style="background-image: url('assets/images/slider/swiss-suites-islamabad-airport.jpg')">
-                        <!-- <div class="video-btn" onclick="openVideoModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=wSaGFm4ScGZS9ai')">
-                            <span class="play-icon">▶</span>
-                        </div> -->
-                        <div class="video-container">
-                            <img src="assets/images/slider/the-magnus-mall.jpg" alt="Video Thumbnail" class="thumbnail">
-                            <div class="play-button" onclick="openModal('https://www.youtube.com/embed/4Q0aK3amnnY?si=atPUJE_qavepHEJT')">▶</div>
-                        </div>
-                        
-                      <div class='content'>
-                        <h2 class='title hide-on-mobile'>Swiss Suites Airport</h2>
-                        <p class='description hide-on-mobile'> Lorem ipsum, dolor sit amet consectetur
-                        adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
-                        praesentium nisi. Id laboriosam ipsam enim.  </p>
-                        <a class="btn-one" href="#">
-                            <span class="txt">
-                                Get Details</i>
-                            </span>
-                        </a>
-                      
-                      </div>
-                    </li>
-                  </ul>
-                  <nav class='nav'>
-                    <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
-                    <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
-                  </nav>
+                        <a href="#" class="slide-button">Get Details</a>
+                    </div>
                 </div>
+                <div class="slide">
+                    <img src="assets/images/slider/ovaisco-homes.jpg">
+                    <div class="details">
+                        <!-- <p>theme</p> -->
+                        <h2 style="color: #fff;">Ovaisco Homes</h2>
+                        <p>
+                            Ovasico Homes, near Kashmir Highway in Islamabad, offers prime plots with modern amenities, blending luxury and functionality for contemporary living.
+                        </p>
+                        <a href="#" class="slide-button">Get Details</a>
+                    </div>
                 </div>
-        </section>
+                <div class="slide">
+                    <img src="assets/images/slider/swiss-suites-burbhan.jpg">
+                    <div class="details">
+                        <!-- <p>theme</p> -->
+                        <h2 style="color: #fff;">Swiss Suites KuzaGali</h2>
+                        <p>
+                            Swiss Suites KuzaGali – Luxury apartments in Ayubia by Ovaisco Builders & Elaan Marketing, surrounded by scenic hills and near top attractions like Bhurban, Nathia Gali, and Patriata.
+                        </p>
+                        <a href="#" class="slide-button">Get Details</a>
+                    </div>
+                </div>
+               
+            </div>
+            <!-- navigation buttons -->
+            <div class="controls">
+                <button id="previous"><</button>
+                <button id="forward">></button>
+            </div>
+            <!-- preview -->
+            <div class="preview">
+                <div class="thumb active">
+                    <img src="assets/images/slider/islamabad-square.jpg">
+                    <!-- <div class="caption">
+                        GRC Islamabad
+                    </div> -->
+                </div>
+                <div class="thumb">
+                    <img src="assets/images/slider/mall-of-korang.jpg">
+                    <!-- <div class="caption">
+                        Title Slide
+                    </div> -->
+                </div>
+                <div class="thumb">
+                    <img src="assets/images/slider/ovaisco-homes.jpg">
+                    <!-- <div class="caption">
+                        Title Slide
+                    </div> -->
+                </div>
+                <div class="thumb">
+                    <img src="assets/images/slider/swiss-suites-burbhan.jpg">
+                    <!-- <div class="caption">
+                        Title Slide
+                    </div> -->
+                </div>
+              
+            </div>
+        </div>
+    
 
         <!-- ✅ Stylish Video Modal -->
         <div id="video-modal" class="modal" onclick="closeModal(event)">
@@ -2297,8 +2243,11 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="assets/js/slider.js"></script>
+    <script src="assets/js/AutoPlaySlider.js"></script>
     <!-- Template js -->
     <script src="assets/js/custom.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> -->
+     <script src="assets/js/img-slider.js"></script>
 
     <!-- video pop up for slider -->
     <script>
@@ -2314,7 +2263,41 @@
             }
         }
     </script>
-    
+
+<!-- <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const slider = document.querySelector(".slider");
+        const items = document.querySelectorAll(".item");
+        let index = 0;
+
+        function autoSlide() {
+            index++;
+            if (index >= items.length) {
+                index = 0;
+            }
+            slider.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        setInterval(autoSlide, 3000); // Slide every 3 seconds
+
+        document.querySelector('.prev').addEventListener('click', () => {
+            index--;
+            if (index < 0) {
+                index = items.length - 1;
+            }
+            slider.style.transform = `translateX(-${index * 100}%)`;
+        });
+
+        document.querySelector('.next').addEventListener('click', () => {
+            index++;
+            if (index >= items.length) {
+                index = 0;
+            }
+            slider.style.transform = `translateX(-${index * 100}%)`;
+        });
+    });
+</script> -->
+
     
 
 
