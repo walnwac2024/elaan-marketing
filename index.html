@@ -178,7 +178,7 @@
     z-index: 2;
 } */
 
-.video-container {
+/* .video-container {
             position: absolute;
             top: 50%;
             right: 10%;
@@ -264,7 +264,7 @@
             border-radius: 10px;
             width: 100%;
             height: 95%;
-        }
+        } */
 
 
         /* slider */
@@ -758,6 +758,7 @@
             <div class="carousel-items">
                 <div class="slide active">
                     <img src="assets/images/slider/gulberg-rabi-center.jpg">
+                    <div class="play-button" data-video="https://www.youtube.com/embed/BX8EYlE5tuM?si=PwxcgjNV_th5KEgR" title="YouTube video player" frameborder="0""></div>
                     <div class="details">
                         <!-- <p>theme</p> -->
                         <h2 style="color: #fff;">GRC Islamabad</h2>
@@ -766,9 +767,14 @@
                         </p>
                         <a href="#" class="slide-button">Get Details</a>
                     </div>
+                     <!-- Thumbnail -->
+                     <div class="slider-thumbnail">
+                        <img src="assets/images/slider/gulberg-rabi-center.jpg" alt="GRC Thumbnail">
+                    </div>
                 </div>
                 <div class="slide">
                     <img src="assets/images/slider/islamabad-square.jpg">
+                    <div class="play-button" data-video="https://www.youtube.com/embed/BX8EYlE5tuM?si=PwxcgjNV_th5KEgR" title="YouTube video player" frameborder="0""></div>
                     <div class="details">
                         <!-- <p>theme</p> -->
                         <h2 style="color: #fff;">Islamabad Square</h2>
@@ -780,6 +786,7 @@
                 </div>
                 <div class="slide">
                     <img src="assets/images/slider/ovaisco-homes.jpg">
+                    <div class="play-button" data-video="https://www.youtube.com/embed/BX8EYlE5tuM?si=PwxcgjNV_th5KEgR" title="YouTube video player" frameborder="0""></div>
                     <div class="details">
                         <!-- <p>theme</p> -->
                         <h2 style="color: #fff;">Ovaisco Homes</h2>
@@ -791,6 +798,7 @@
                 </div>
                 <div class="slide">
                     <img src="assets/images/slider/swiss-suites-burbhan.jpg">
+                    <div class="play-button" data-video="https://www.youtube.com/embed/BX8EYlE5tuM?si=PwxcgjNV_th5KEgR" title="YouTube video player" frameborder="0""></div>
                     <div class="details">
                         <!-- <p>theme</p> -->
                         <h2 style="color: #fff;">Swiss Suites KuzaGali</h2>
@@ -836,15 +844,23 @@
               
             </div>
         </div>
-    
+         
+        <!-- Video Modal -->
+            <div class="video-modal" id="videoModal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <iframe id="videoFrame" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
 
         <!-- ✅ Stylish Video Modal -->
-        <div id="video-modal" class="modal" onclick="closeModal(event)">
+        <!-- <div id="video-modal" class="modal" onclick="closeModal(event)">
             <div class="modal-content">
                 <span class="close-button" onclick="closeModal(event)">&times;</span>
                 <iframe id="video-frame" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
             </div>
-        </div>
+        </div> -->
 
         <!--Main Slider End-->
         
@@ -2248,6 +2264,7 @@
     <script src="assets/js/custom.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> -->
      <script src="assets/js/img-slider.js"></script>
+     <script src="assets/js/video-modal.js"></script>
 
     <!-- video pop up for slider -->
     <script>

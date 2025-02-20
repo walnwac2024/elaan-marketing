@@ -244,3 +244,134 @@ header .navigation{
     transform: translateY(-2px); /* Slight lift effect */
 }
 
+
+/* Thumbnail Styling */
+/* Thumbnail Styling */
+.slider-thumbnail {
+    position: absolute;
+    top: 10px; /* Position at the top */
+    right: 10px; /* Position on the right */
+    z-index: 150; /* Ensure it's above other elements */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Thumbnail Image Styling */
+.slider-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.slider-thumbnail:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(219, 56, 50, 0.7);
+}
+
+
+/* Play Button Styling (No Movement) */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-color: rgba(219, 56, 50, 0.8);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Play Icon */
+.play-button::before {
+    content: '\25B6'; /* Play icon (▶) */
+    font-size: 36px;
+    color: white;
+    margin-left: 5px;
+}
+
+/* Glow Effect on Hover (No Movement) */
+.play-button:hover {
+    box-shadow: 0 0 15px rgba(219, 56, 50, 1);
+}
+
+
+
+/* Video Modal Styling */
+.video-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+}
+
+#videoFrame {
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Fade-out Animation */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+
